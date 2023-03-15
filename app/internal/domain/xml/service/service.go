@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"project/internal/domain/xml/dto"
 	"project/internal/domain/xml/storage"
 	models "project/internal/model"
 	"strconv"
@@ -15,6 +16,7 @@ import (
 type XmlService interface {
 	All() []*models.Xml
 	Import() error
+	GetNames(xml *dto.XmlDTO) ([]*models.Xml, error)
 }
 
 type xmlService struct {
@@ -105,6 +107,10 @@ func NewXmlService(storage storage.XmlStorage) XmlService {
 
 func (s *xmlService) All() []*models.Xml {
 	return s.storage.All()
+}
+
+func (s *xmlService) GetNames(xml *dto.XmlDTO) ([]*models.Xml, error) {
+	return s.storage.GetNames(xml)
 }
 
 func (s *xmlService) Import() error {

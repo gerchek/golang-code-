@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/go-playground/validator/v10 v10.11.2
 	github.com/gofiber/fiber/v2 v2.42.0
+	github.com/joho/godotenv v1.5.1
 	github.com/sirupsen/logrus v1.9.0
 	gorm.io/datatypes v1.1.1
 	gorm.io/driver/mysql v1.4.7
@@ -19,7 +20,6 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/klauspost/compress v1.15.9 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect

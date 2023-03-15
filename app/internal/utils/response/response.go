@@ -6,15 +6,17 @@ type Response struct {
 	Status  bool        `json:"status"`
 	Message string      `json:"message"`
 	Errors  interface{} `json:"errors"`
+	Data    interface{} `json:"data"`
 }
 
 type EmptyObject struct{}
 
-func Success(status bool, message string) Response {
+func Success(status bool, message string, data interface{}) Response {
 	return Response{
 		Status:  status,
 		Message: message,
 		Errors:  nil,
+		Data:    data,
 	}
 }
 

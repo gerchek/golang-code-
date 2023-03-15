@@ -1,5 +1,6 @@
 package dto
 
 type XmlDTO struct {
-	Name string `json:"name" form:"name" validate:"required,max=70"`
+	Name string `json:"name" form:"name" validate:"required"`
+	Type string `json:"type" form:"type" validate:"required"`
 }
