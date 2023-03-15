@@ -1,0 +1,12 @@
+1. migrate create -ext sql -dir .  table_name
+2. migrate -path . -database "postgresql://postgres:postgres@localhost:5432/my_project" -verbose up
+
+
+
+
+ 
+update migration => https://github.com/merico-dev/lake/blob/migrations-v2/MIGRATIONS.md
+
+migrate -path . -database "postgresql://postgres:postgres@localhost:5432/my_project" -verbose force < id_migration >
+migrate -path . -database "postgresql://postgres:postgres@localhost:5432/my_project" -verbose down 1
+migrate -path . -database "postgresql://postgres:postgres@localhost:5432/my_project" -verbose up
